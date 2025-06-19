@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://0qqrp73nw3cy"]
+
+[ext_resource type="Texture2D" uid="uid://b4s4p7y3asbsn" path="res://Assets/Character/Player/Textures/Face/Eye/Eye1.png" id="1_jdidw"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_jdidw")
+metallic_specular = 0.0

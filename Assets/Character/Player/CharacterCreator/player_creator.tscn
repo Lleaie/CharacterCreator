@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://7nf863ua1qyy"]
+
+[ext_resource type="PackedScene" uid="uid://s8h4ii7hirjx" path="res://Assets/Character/Player/Scene and Code/rig.tscn" id="1_qfe5i"]
+[ext_resource type="Script" uid="uid://cs05m7k508lri" path="res://Assets/Character/Player/CharacterCreator/player_creator.gd" id="1_ueniq"]
+[ext_resource type="Material" uid="uid://ceuihmgg627a1" path="res://Assets/Character/Player/Materials/Player/PlayerBody.tres" id="3_ofc25"]
+[ext_resource type="Material" uid="uid://bmtegcce2kjbd" path="res://Assets/Character/Player/Materials/Player/PlayerHair.tres" id="4_wnv6h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ueniq"]
+size = Vector3(1, 1.81531, 1)
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_ofc25"]
+
+[node name="Player_Creator" type="StaticBody3D"]
+script = ExtResource("1_ueniq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.907654, 0)
+shape = SubResource("BoxShape3D_ueniq")
+
+[node name="Rig" parent="." instance=ExtResource("1_qfe5i")]
+
+[node name="Skeleton3D" parent="Rig/PlayerModel/PlayerModel" index="0"]
+bones/1/position = Vector3(-0.00235193, 0.00406392, 0.552016)
+bones/1/rotation = Quaternion(-0.0248735, 0.706146, 0.706691, -0.0364194)
+bones/2/rotation = Quaternion(0.700207, 0.0778809, 0.70603, 0.0718766)
+bones/3/rotation = Quaternion(-5.93e-08, 1.44505e-08, 0.235289, 0.971926)
+bones/4/rotation = Quaternion(-0.463535, -0.542065, 0.569551, -0.408549)
+bones/5/rotation = Quaternion(-6.69298e-07, 0.994051, -0.10892, -4.46551e-06)
+bones/6/rotation = Quaternion(0.761557, -0.0960101, -0.639431, 0.0440546)
+bones/7/rotation = Quaternion(2.16131e-08, 1.84215e-08, -0.245597, 0.969372)
+bones/8/rotation = Quaternion(0.465365, -0.535305, 0.582566, 0.396863)
+bones/9/rotation = Quaternion(-1.61323e-07, 0.99405, -0.108921, -5.08199e-07)
+bones/10/position = Vector3(0.00127986, 0.140613, -0.0142893)
+bones/10/rotation = Quaternion(-0.0558704, -0.0462978, -0.0105112, 0.997309)
+bones/11/position = Vector3(3.09913e-11, 0.144263, 4.65503e-09)
+bones/11/rotation = Quaternion(0.0175904, 0.00299252, -5.26438e-05, 0.999841)
+bones/12/rotation = Quaternion(-0.0251266, -1.18936e-07, -3.01241e-09, 0.999684)
+bones/13/rotation = Quaternion(0.0838598, 0.00714779, 0.000409648, 0.996452)
+bones/14/rotation = Quaternion(0.00190586, -0.00676013, 1.27545e-05, 0.999975)
+bones/15/rotation = Quaternion(-0.512899, 0.479739, 0.519704, 0.486511)
+bones/16/rotation = Quaternion(-0.600625, -0.118299, -0.0888331, 0.785725)
+bones/17/rotation = Quaternion(2.54236e-07, -8.35793e-08, 0.232339, 0.972635)
+bones/18/rotation = Quaternion(0.00443029, 0.0384455, -0.0172018, 0.999103)
+bones/19/rotation = Quaternion(-0.315458, 0.939095, -0.0337442, -0.132093)
+bones/20/rotation = Quaternion(-0.169349, 0.173378, 0.269458, 0.932016)
+bones/22/position = Vector3(0.051452, 0.0836997, 0.00122976)
+bones/22/rotation = Quaternion(-0.0716317, 0.0177471, -0.206919, 0.975571)
+bones/23/rotation = Quaternion(-0.258315, -0.0121746, 0.0654743, 0.963763)
+bones/24/rotation = Quaternion(-0.0950228, -0.000396846, 0.00385284, 0.995468)
+bones/25/position = Vector3(0.0233928, 0.112432, 0.00169727)
+bones/25/rotation = Quaternion(-0.1383, 0.0175173, -0.117031, 0.983295)
+bones/26/rotation = Quaternion(-0.111855, -0.0021666, 0.0243721, 0.993423)
+bones/27/rotation = Quaternion(-0.173269, -0.00208261, 0.0124794, 0.984793)
+bones/28/position = Vector3(-0.00697691, 0.125151, -0.00027741)
+bones/28/rotation = Quaternion(-0.161458, -0.00578402, -0.00464341, 0.986852)
+bones/29/rotation = Quaternion(-0.0841806, 0.00523345, -0.0503515, 0.995164)
+bones/30/rotation = Quaternion(-0.13754, -0.00280236, 0.0239678, 0.990202)
+bones/31/rotation = Quaternion(-0.513234, -0.479397, -0.519378, 0.486843)
+bones/32/rotation = Quaternion(-0.611617, 0.135402, 0.0860169, 0.77472)
+bones/33/rotation = Quaternion(1.58228e-07, 1.8876e-08, -0.281193, 0.959651)
+bones/34/rotation = Quaternion(-0.0231777, -0.0526867, 0.120679, 0.991022)
+bones/35/rotation = Quaternion(0.315458, 0.939095, -0.0337441, 0.132093)
+bones/36/rotation = Quaternion(-0.169349, -0.173378, -0.269458, 0.932016)
+bones/38/position = Vector3(-0.051452, 0.0836997, 0.00122979)
+bones/38/rotation = Quaternion(-0.0716318, -0.0177471, 0.20692, 0.975571)
+bones/39/rotation = Quaternion(-0.258315, 0.0121746, -0.0654743, 0.963763)
+bones/40/rotation = Quaternion(-0.0950228, 0.000396858, -0.00385285, 0.995468)
+bones/41/position = Vector3(-0.0233928, 0.112432, 0.00169721)
+bones/41/rotation = Quaternion(-0.1383, -0.0175173, 0.117031, 0.983295)
+bones/42/rotation = Quaternion(-0.111855, 0.0021666, -0.0243721, 0.993423)
+bones/43/rotation = Quaternion(-0.173269, 0.00208261, -0.0124794, 0.984793)
+bones/44/position = Vector3(0.0069769, 0.125151, -0.000277381)
+bones/44/rotation = Quaternion(-0.161458, 0.00578403, 0.00464338, 0.986852)
+bones/45/rotation = Quaternion(-0.0841806, -0.00523345, 0.0503515, 0.995164)
+bones/46/rotation = Quaternion(-0.13754, 0.00280236, -0.0239678, 0.990202)
+
+[node name="Body" parent="Rig/PlayerModel/PlayerModel/Skeleton3D" index="1"]
+material_override = ExtResource("3_ofc25")
+
+[node name="Hair2" parent="Rig/PlayerModel/PlayerModel/Skeleton3D" index="5"]
+material_override = ExtResource("4_wnv6h")
+
+[node name="AnimationTree" parent="Rig" index="1"]
+parameters/MoveSpace/blend_position = -0.96714
+
+[node name="SmoothCameraArm" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, -0.00424516, 1, -0.0024116)
+collision_mask = 2
+shape = SubResource("SeparationRayShape3D_ofc25")
+spring_length = 1.5
+
+[node name="Camera3D" type="Camera3D" parent="SmoothCameraArm"]
+transform = Transform3D(0.999999, 0.000833335, 0.00118664, -0.000832078, 0.999999, -0.00106311, -0.00118752, 0.00106215, 0.999999, 0, 0, 0)
+
+[node name="HorizontalPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="VerticalPivot" type="Node3D" parent="HorizontalPivot"]
+
+[editable path="Rig"]
+[editable path="Rig/PlayerModel"]

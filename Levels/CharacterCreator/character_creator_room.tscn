@@ -1,0 +1,68 @@
+[gd_scene load_steps=27 format=3 uid="uid://cyd48m2nalyr1"]
+
+[ext_resource type="PackedScene" uid="uid://dkd8374ne8fnv" path="res://Assets/Levels/CharacterCreator/CharacterCreatorRoom.glb" id="1_vresl"]
+[ext_resource type="Texture2D" uid="uid://5ybm0abvnujb" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth1.png" id="2_lsb0b"]
+[ext_resource type="Texture2D" uid="uid://dot05xwbfgya" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth2.png" id="3_4krqk"]
+[ext_resource type="PackedScene" uid="uid://btuvu1h0bctqt" path="res://Assets/UI/CharacterCreator/character_creator.tscn" id="3_6yiu2"]
+[ext_resource type="PackedScene" uid="uid://7nf863ua1qyy" path="res://Assets/Character/Player/CharacterCreator/player_creator.tscn" id="3_o2og5"]
+[ext_resource type="Texture2D" uid="uid://d2pj1rjfjqet" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth3.png" id="4_i6m0f"]
+[ext_resource type="Texture2D" uid="uid://n240cq1bm35o" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth4.png" id="5_e3na1"]
+[ext_resource type="Texture2D" uid="uid://4206q6hq8mao" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth5.png" id="6_r0e25"]
+[ext_resource type="Texture2D" uid="uid://bux6k6v2rwy7h" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth6.png" id="7_yh5bb"]
+[ext_resource type="Texture2D" uid="uid://c6gjpc3adwrwp" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth7.png" id="8_exkwh"]
+[ext_resource type="Texture2D" uid="uid://nqkmxsyvt1lb" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth8.png" id="9_1snsr"]
+[ext_resource type="Texture2D" uid="uid://c8cafkhtq6iyq" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth9.png" id="10_jucdn"]
+[ext_resource type="Texture2D" uid="uid://dulnb011dk41x" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth10.png" id="11_kgr0q"]
+[ext_resource type="Texture2D" uid="uid://bmljqtupwuckb" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth11.png" id="12_7ierw"]
+[ext_resource type="Texture2D" uid="uid://c00a1axt3u0tl" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth12.png" id="13_glodq"]
+[ext_resource type="Texture2D" uid="uid://ccl4ewbqkly4f" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth13.png" id="14_h5t55"]
+[ext_resource type="Texture2D" uid="uid://cywyh5ve4xpgs" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth14.png" id="15_887ko"]
+[ext_resource type="Texture2D" uid="uid://dsnbc7ftm3xse" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth15.png" id="16_ulqkt"]
+[ext_resource type="Texture2D" uid="uid://cx8ddva8w6836" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth16.png" id="17_w2ro3"]
+[ext_resource type="Texture2D" uid="uid://2mtct3uc8yjd" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth17.png" id="18_yd1my"]
+[ext_resource type="Texture2D" uid="uid://f1bpjr4floc0" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth18.png" id="19_rhkyq"]
+[ext_resource type="Texture2D" uid="uid://b0n7b35v62f6p" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth19.png" id="20_amble"]
+[ext_resource type="Texture2D" uid="uid://gpb37qepnkss" path="res://Assets/Character/Player/Textures/Face/Mouth/Mouth20.png" id="21_3te66"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vresl"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_6yiu2"]
+sky_material = SubResource("ProceduralSkyMaterial_vresl")
+
+[sub_resource type="Environment" id="Environment_o2og5"]
+background_mode = 2
+sky = SubResource("Sky_6yiu2")
+sdfgi_bounce_feedback = 0.0
+adjustment_saturation = 0.01
+
+[node name="CharacterCreatorRoom" type="Node3D"]
+
+[node name="CharacterCreator" parent="." instance=ExtResource("3_6yiu2")]
+moutharray = Array[CompressedTexture2D]([ExtResource("2_lsb0b"), ExtResource("3_4krqk"), ExtResource("4_i6m0f"), ExtResource("5_e3na1"), ExtResource("6_r0e25"), ExtResource("7_yh5bb"), ExtResource("8_exkwh"), ExtResource("9_1snsr"), ExtResource("10_jucdn"), ExtResource("11_kgr0q"), ExtResource("12_7ierw"), ExtResource("13_glodq"), ExtResource("14_h5t55"), ExtResource("15_887ko"), ExtResource("16_ulqkt"), ExtResource("17_w2ro3"), ExtResource("18_yd1my"), ExtResource("19_rhkyq"), ExtResource("20_amble"), ExtResource("21_3te66")])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o2og5")
+
+[node name="CharacterCreatorRoom" parent="." instance=ExtResource("1_vresl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" parent="CharacterCreatorRoom/Wall/StaticBody3D" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="CharacterCreatorRoom/Floor/StaticBody3D" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="CharacterCreatorRoom/Roof/StaticBody3D" index="0"]
+visible = false
+
+[node name="Player_Creator" parent="." instance=ExtResource("3_o2og5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.01, 2, 1)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488011, 4.4414, -7.19047)
+shadow_enabled = true
+omni_range = 19.177
+
+[editable path="CharacterCreatorRoom"]

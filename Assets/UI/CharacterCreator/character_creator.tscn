@@ -1,0 +1,751 @@
+[gd_scene load_steps=21 format=3 uid="uid://btuvu1h0bctqt"]
+
+[ext_resource type="Script" uid="uid://dkjq466jt33ja" path="res://Assets/UI/CharacterCreator/character_creator.gd" id="1_qa8nu"]
+[ext_resource type="Texture2D" uid="uid://b4s4p7y3asbsn" path="res://Assets/Character/Player/Textures/Face/Eye/Eye1.png" id="2_0a7jg"]
+[ext_resource type="Texture2D" uid="uid://c5i05tyopn44y" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Violet.png" id="2_8t38r"]
+[ext_resource type="Texture2D" uid="uid://b6gh3jc3reydj" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Brown.png" id="3_vwgcl"]
+[ext_resource type="Texture2D" uid="uid://ci8b0ccrsewhi" path="res://Assets/Character/Player/Textures/Face/Eye/Eye2.png" id="3_wim01"]
+[ext_resource type="Texture2D" uid="uid://bdkgxhl637r2i" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Orange.png" id="4_sx1mk"]
+[ext_resource type="Texture2D" uid="uid://bie8b5qgghckk" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Yellow.png" id="5_0a7jg"]
+[ext_resource type="Texture2D" uid="uid://65m7m10plg30" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Red.png" id="6_wim01"]
+[ext_resource type="Texture2D" uid="uid://ssdvju780dr5" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Icy.png" id="7_dxfnr"]
+[ext_resource type="Texture2D" uid="uid://b2qddveeitvit" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Blue.png" id="8_qvt55"]
+[ext_resource type="Texture2D" uid="uid://cli4tvugps47j" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Void.png" id="9_sq6j0"]
+[ext_resource type="Texture2D" uid="uid://dqc76q4jjak7y" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Black.png" id="10_gmkl5"]
+[ext_resource type="Texture2D" uid="uid://nsa045c5i4a1" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Green.png" id="11_x6byk"]
+[ext_resource type="Texture2D" uid="uid://m3tbja7nhan7" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Grey.png" id="12_4wsmx"]
+[ext_resource type="Texture2D" uid="uid://bg37tlxk8nyuq" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/White.png" id="13_1etw7"]
+[ext_resource type="Texture2D" uid="uid://cm7neb3mw411n" path="res://Assets/Character/Player/Textures/Face/Eye/Eye 3/Blind.png" id="14_37d0l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa8nu"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="Theme" id="Theme_8t38r"]
+Label/styles/normal = SubResource("StyleBoxFlat_qa8nu")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2teeq"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="Theme" id="Theme_1tk7s"]
+Label/styles/normal = SubResource("StyleBoxFlat_2teeq")
+
+[node name="CharacterCreator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qa8nu")
+eyearray = Array[CompressedTexture2D]([ExtResource("2_0a7jg"), ExtResource("3_wim01"), ExtResource("12_4wsmx")])
+
+[node name="Race&Gender" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 1040)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -520.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(500, 0)
+
+[node name="Label" type="Label" parent="Race&Gender"]
+layout_mode = 2
+text = "Race Select"
+horizontal_alignment = 1
+
+[node name="Row1" type="HBoxContainer" parent="Race&Gender"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="TrivallenRace" type="Button" parent="Race&Gender/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Trivallen"
+
+[node name="ErylirRace" type="Button" parent="Race&Gender/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Erylir"
+
+[node name="Button3" type="Button" parent="Race&Gender/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "?"
+
+[node name="Button4" type="Button" parent="Race&Gender/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "?"
+
+[node name="Button5" type="Button" parent="Race&Gender/Row1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "?"
+
+[node name="Row2" type="HBoxContainer" parent="Race&Gender"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="FeilRace" type="Button" parent="Race&Gender/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Feil Sìth"
+
+[node name="CiarRace" type="Button" parent="Race&Gender/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Ciar Sìth"
+
+[node name="FuarRace" type="Button" parent="Race&Gender/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Fuar Sìth"
+
+[node name="Button4" type="Button" parent="Race&Gender/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "?"
+
+[node name="Button5" type="Button" parent="Race&Gender/Row2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "?"
+
+[node name="Label3" type="Label" parent="Race&Gender"]
+layout_mode = 2
+text = "Where are you from?
+"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="Row3" type="HBoxContainer" parent="Race&Gender"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="Button4" type="Button" parent="Race&Gender/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Tristara"
+
+[node name="Button5" type="Button" parent="Race&Gender/Row3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Trivallen Fogrest"
+
+[node name="Panel" type="Panel" parent="Race&Gender"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.65
+
+[node name="MarginContainer" type="MarginContainer" parent="Race&Gender/Panel"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 343.0
+theme_override_constants/margin_left = 0
+
+[node name="Label" type="Label" parent="Race&Gender/Panel/MarginContainer"]
+custom_minimum_size = Vector2(500, 343)
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida urna lectus, et ornare felis eleifend id. Morbi iaculis lacus eget faucibus condimentum. Nunc convallis, ex ut auctor sodales, nunc est sagittis elit, sed lobortis ex orci quis libero. Morbi hendrerit imperdiet porttitor. Fusce a magna non felis tincidunt sagittis at sit amet eros. Fusce a leo risus. Nullam rutrum efficitur libero, at varius metus consectetur et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida nunc et vestibulum auctor. Aenean massa odio, volutpat sit amet neque eu, sagittis gravida leo.
+"
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Race&Gender"]
+custom_minimum_size = Vector2(0, 248)
+layout_mode = 2
+alignment = 1
+
+[node name="MaleButton" type="Button" parent="Race&Gender/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+action_mode = 0
+text = "♂"
+
+[node name="FemaleButton" type="Button" parent="Race&Gender/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+action_mode = 0
+text = "♀"
+
+[node name="Label2" type="Label" parent="Race&Gender"]
+layout_mode = 2
+text = "Gender Select
+"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="Customisation" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 1040)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 520.0
+offset_bottom = -20.0
+grow_vertical = 2
+
+[node name="Tabs" type="VBoxContainer" parent="Customisation"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TabButtons" type="VBoxContainer" parent="Customisation/Tabs"]
+custom_minimum_size = Vector2(100, 372)
+layout_mode = 2
+
+[node name="HeadTab" type="Button" parent="Customisation/Tabs/TabButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Head"
+
+[node name="BodyTab" type="Button" parent="Customisation/Tabs/TabButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Body"
+
+[node name="ToggleClothingButton" type="Button" parent="Customisation/Tabs/TabButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+toggle_mode = true
+text = "Toggle Clothing"
+autowrap_mode = 2
+
+[node name="ClipBox" type="Panel" parent="Customisation/Tabs"]
+clip_children = 1
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="BodyContent" type="VBoxContainer" parent="Customisation"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="FemaleSliders" type="VBoxContainer" parent="Customisation/BodyContent"]
+layout_mode = 2
+
+[node name="BreastsSizeSlider" type="VBoxContainer" parent="Customisation/BodyContent/FemaleSliders"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/FemaleSliders/BreastsSizeSlider"]
+layout_mode = 2
+text = "Breasts"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/FemaleSliders/BreastsSizeSlider"]
+layout_mode = 2
+
+[node name="BreastsSizeSlider" type="HSlider" parent="Customisation/BodyContent/FemaleSliders/BreastsSizeSlider/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+
+[node name="BreastsSizeValue" type="Label" parent="Customisation/BodyContent/FemaleSliders/BreastsSizeSlider/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="FemaleChestSizeSlider" type="VBoxContainer" parent="Customisation/BodyContent/FemaleSliders"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/FemaleSliders/FemaleChestSizeSlider"]
+layout_mode = 2
+text = "Chest Size"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/FemaleSliders/FemaleChestSizeSlider"]
+layout_mode = 2
+
+[node name="FemaleChestSizeSlider" type="HSlider" parent="Customisation/BodyContent/FemaleSliders/FemaleChestSizeSlider/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+
+[node name="FemaleChestSizeValue" type="Label" parent="Customisation/BodyContent/FemaleSliders/FemaleChestSizeSlider/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="MaleSliders" type="VBoxContainer" parent="Customisation/BodyContent"]
+layout_mode = 2
+
+[node name="ChestSizeSlider" type="VBoxContainer" parent="Customisation/BodyContent/MaleSliders"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/MaleSliders/ChestSizeSlider"]
+layout_mode = 2
+text = "Chest Size"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/MaleSliders/ChestSizeSlider"]
+layout_mode = 2
+
+[node name="MaleChestSizeSlider" type="HSlider" parent="Customisation/BodyContent/MaleSliders/ChestSizeSlider/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+
+[node name="MaleChestSizeValue" type="Label" parent="Customisation/BodyContent/MaleSliders/ChestSizeSlider/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="ThighSizeSlider" type="VBoxContainer" parent="Customisation/BodyContent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/ThighSizeSlider"]
+layout_mode = 2
+text = "Thigh Size"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/ThighSizeSlider"]
+layout_mode = 2
+
+[node name="ThighSizeSlider" type="HSlider" parent="Customisation/BodyContent/ThighSizeSlider/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+
+[node name="ThighSizeValue" type="Label" parent="Customisation/BodyContent/ThighSizeSlider/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="BootySizeSlider" type="VBoxContainer" parent="Customisation/BodyContent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/BootySizeSlider"]
+layout_mode = 2
+text = "Booty Size"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/BootySizeSlider"]
+layout_mode = 2
+
+[node name="BootySizeSlider" type="HSlider" parent="Customisation/BodyContent/BootySizeSlider/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+
+[node name="BootySizeValue" type="Label" parent="Customisation/BodyContent/BootySizeSlider/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="ArmSizeSlider" type="VBoxContainer" parent="Customisation/BodyContent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/ArmSizeSlider"]
+layout_mode = 2
+text = "Arm Size"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/ArmSizeSlider"]
+layout_mode = 2
+
+[node name="ArmSizeSlider" type="HSlider" parent="Customisation/BodyContent/ArmSizeSlider/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+
+[node name="ArmSizeValue" type="Label" parent="Customisation/BodyContent/ArmSizeSlider/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="TrivallenSkinTone" type="VBoxContainer" parent="Customisation/BodyContent"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/TrivallenSkinTone"]
+layout_mode = 2
+text = "Skin Tone"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/TrivallenSkinTone"]
+layout_mode = 2
+
+[node name="TrivallenSkinSlider" type="HSlider" parent="Customisation/BodyContent/TrivallenSkinTone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 3.0
+value = 1.0
+
+[node name="TrivallenSkinValue" type="Label" parent="Customisation/BodyContent/TrivallenSkinTone/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="ErylirSkinTone" type="VBoxContainer" parent="Customisation/BodyContent"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/ErylirSkinTone"]
+layout_mode = 2
+text = "Skin Tone"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/ErylirSkinTone"]
+layout_mode = 2
+
+[node name="ErylirSkinSlider" type="HSlider" parent="Customisation/BodyContent/ErylirSkinTone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 3.0
+value = 1.0
+
+[node name="ErylirSkinValue" type="Label" parent="Customisation/BodyContent/ErylirSkinTone/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="CiarSkinTone" type="VBoxContainer" parent="Customisation/BodyContent"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/CiarSkinTone"]
+layout_mode = 2
+text = "Skin Tone"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/CiarSkinTone"]
+layout_mode = 2
+
+[node name="CiarSkinSlider" type="HSlider" parent="Customisation/BodyContent/CiarSkinTone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 5.0
+value = 1.0
+
+[node name="CiarSkinValue" type="Label" parent="Customisation/BodyContent/CiarSkinTone/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="FeilSkinTone" type="VBoxContainer" parent="Customisation/BodyContent"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/FeilSkinTone"]
+layout_mode = 2
+text = "Skin Tone"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/FeilSkinTone"]
+layout_mode = 2
+
+[node name="FeilSkinSlider" type="HSlider" parent="Customisation/BodyContent/FeilSkinTone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 3.0
+value = 1.0
+
+[node name="FeilSkinValue" type="Label" parent="Customisation/BodyContent/FeilSkinTone/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="FuarSkinTone" type="VBoxContainer" parent="Customisation/BodyContent"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Customisation/BodyContent/FuarSkinTone"]
+layout_mode = 2
+text = "Skin Tone"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/BodyContent/FuarSkinTone"]
+layout_mode = 2
+
+[node name="FuarSkinSlider" type="HSlider" parent="Customisation/BodyContent/FuarSkinTone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 3.0
+value = 1.0
+
+[node name="FuarSkinValue" type="Label" parent="Customisation/BodyContent/FuarSkinTone/HBoxContainer"]
+layout_mode = 2
+text = "0.00"
+
+[node name="HeadContent" type="VBoxContainer" parent="Customisation"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Eyes" type="VBoxContainer" parent="Customisation/HeadContent"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/HeadContent/Eyes"]
+layout_mode = 2
+
+[node name="EyesButtonLeft" type="Button" parent="Customisation/HeadContent/Eyes/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "<"
+
+[node name="Label" type="Label" parent="Customisation/HeadContent/Eyes/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8t38r")
+text = "Eyes"
+vertical_alignment = 1
+
+[node name="EyesLabel" type="Label" parent="Customisation/HeadContent/Eyes/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_1tk7s")
+text = "ERROR"
+horizontal_alignment = 1
+
+[node name="EyesButtonRight" type="Button" parent="Customisation/HeadContent/Eyes/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = ">"
+
+[node name="Eye3List" type="ItemList" parent="Customisation/HeadContent/Eyes"]
+visible = false
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 13
+max_columns = 5
+fixed_icon_size = Vector2i(64, 64)
+item_0/icon = ExtResource("2_8t38r")
+item_1/icon = ExtResource("3_vwgcl")
+item_2/icon = ExtResource("4_sx1mk")
+item_3/icon = ExtResource("5_0a7jg")
+item_4/icon = ExtResource("6_wim01")
+item_5/icon = ExtResource("7_dxfnr")
+item_6/icon = ExtResource("8_qvt55")
+item_7/icon = ExtResource("11_x6byk")
+item_8/icon = ExtResource("9_sq6j0")
+item_9/icon = ExtResource("10_gmkl5")
+item_10/icon = ExtResource("12_4wsmx")
+item_11/icon = ExtResource("13_1etw7")
+item_12/icon = ExtResource("14_37d0l")
+
+[node name="Mouth" type="VBoxContainer" parent="Customisation/HeadContent"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/HeadContent/Mouth"]
+layout_mode = 2
+
+[node name="MouthButtonLeft" type="Button" parent="Customisation/HeadContent/Mouth/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "<"
+
+[node name="Label" type="Label" parent="Customisation/HeadContent/Mouth/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8t38r")
+text = "Mouth"
+vertical_alignment = 1
+
+[node name="MouthLabel" type="Label" parent="Customisation/HeadContent/Mouth/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_1tk7s")
+text = "ERROR"
+horizontal_alignment = 1
+
+[node name="MouthButtonRight" type="Button" parent="Customisation/HeadContent/Mouth/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = ">"
+
+[node name="Hair" type="VBoxContainer" parent="Customisation/HeadContent"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Customisation/HeadContent/Hair"]
+layout_mode = 2
+
+[node name="HairButtonLeft" type="Button" parent="Customisation/HeadContent/Hair/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "<"
+
+[node name="Label" type="Label" parent="Customisation/HeadContent/Hair/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_8t38r")
+text = "Hair Colour"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HairButtonRight" type="Button" parent="Customisation/HeadContent/Hair/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = ">"
+
+[node name="HairColourPicker" type="ColorPickerButton" parent="Customisation/HeadContent/Hair"]
+layout_mode = 2
+text = "Colour"
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -95.0
+offset_top = -205.0
+offset_right = 95.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2.095, 2.095)
+pivot_offset = Vector2(95, 0)
+
+[node name="NameSelect" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36283, 0.362829, 0.362829, 1)
+placeholder_text = "Name"
+alignment = 1
+emoji_menu_enabled = false
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Character Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Save&ContinueButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(190.485, 31.41)
+layout_mode = 2
+text = "Save & Continue"
+
+[node name="ConfirmBox" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ConfirmBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(250, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfirmBox/Panel"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -30.5
+offset_right = 250.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ConfirmBox/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+text = "Are you sure you wish to continue?
+You will be unable to change your race and where you're from beyond this point."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="ConfirmBox/Panel/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 18.625)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfirmBox/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 71.03)
+layout_mode = 2
+
+[node name="YesConfirm" type="Button" parent="ConfirmBox/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Yes"
+
+[node name="NoConfirm" type="Button" parent="ConfirmBox/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No"
+
+[node name="HSeparator2" type="HSeparator" parent="ConfirmBox/Panel/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 18.625)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1024.0
+offset_right = 246.0
+offset_bottom = 1074.0
+theme_override_font_sizes/font_size = 36
+text = "Q & E - Rotate Camera"
+
+[connection signal="pressed" from="Race&Gender/Row1/TrivallenRace" to="." method="_on_trivallen_race_pressed"]
+[connection signal="pressed" from="Race&Gender/Row1/ErylirRace" to="." method="_on_erylir_race_pressed"]
+[connection signal="pressed" from="Race&Gender/Row2/FeilRace" to="." method="_on_feil_race_pressed"]
+[connection signal="pressed" from="Race&Gender/Row2/CiarRace" to="." method="_on_ciar_race_pressed"]
+[connection signal="pressed" from="Race&Gender/Row2/FuarRace" to="." method="_on_fuar_race_pressed"]
+[connection signal="pressed" from="Race&Gender/HBoxContainer/MaleButton" to="." method="_on_male_button_pressed"]
+[connection signal="pressed" from="Race&Gender/HBoxContainer/FemaleButton" to="." method="_on_female_button_pressed"]
+[connection signal="pressed" from="Customisation/Tabs/TabButtons/HeadTab" to="." method="_on_head_tab_pressed"]
+[connection signal="pressed" from="Customisation/Tabs/TabButtons/BodyTab" to="." method="_on_body_tab_pressed"]
+[connection signal="toggled" from="Customisation/Tabs/TabButtons/ToggleClothingButton" to="." method="_on_toggle_clothing_button_toggled"]
+[connection signal="value_changed" from="Customisation/BodyContent/FemaleSliders/BreastsSizeSlider/HBoxContainer/BreastsSizeSlider" to="." method="_on_breasts_size_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/FemaleSliders/FemaleChestSizeSlider/HBoxContainer/FemaleChestSizeSlider" to="." method="_on_female_chest_size_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/MaleSliders/ChestSizeSlider/HBoxContainer/MaleChestSizeSlider" to="." method="_on_male_chest_size_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/ThighSizeSlider/HBoxContainer/ThighSizeSlider" to="." method="_on_thigh_size_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/BootySizeSlider/HBoxContainer/BootySizeSlider" to="." method="_on_booty_size_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/ArmSizeSlider/HBoxContainer/ArmSizeSlider" to="." method="_on_arm_size_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/TrivallenSkinTone/HBoxContainer/TrivallenSkinSlider" to="." method="_on_trivallen_skin_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/ErylirSkinTone/HBoxContainer/ErylirSkinSlider" to="." method="_on_erylir_skin_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/CiarSkinTone/HBoxContainer/CiarSkinSlider" to="." method="_on_ciar_skin_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/FeilSkinTone/HBoxContainer/FeilSkinSlider" to="." method="_on_feil_skin_slider_value_changed"]
+[connection signal="value_changed" from="Customisation/BodyContent/FuarSkinTone/HBoxContainer/FuarSkinSlider" to="." method="_on_fuar_skin_slider_value_changed"]
+[connection signal="pressed" from="Customisation/HeadContent/Eyes/HBoxContainer/EyesButtonLeft" to="." method="_on_eyes_button_left_pressed"]
+[connection signal="pressed" from="Customisation/HeadContent/Eyes/HBoxContainer/EyesButtonRight" to="." method="_on_eyes_button_right_pressed"]
+[connection signal="item_selected" from="Customisation/HeadContent/Eyes/Eye3List" to="." method="_on_eye_3_list_item_selected"]
+[connection signal="pressed" from="Customisation/HeadContent/Mouth/HBoxContainer/MouthButtonLeft" to="." method="_on_mouth_button_left_pressed"]
+[connection signal="pressed" from="Customisation/HeadContent/Mouth/HBoxContainer/MouthButtonRight" to="." method="_on_mouth_button_right_pressed"]
+[connection signal="color_changed" from="Customisation/HeadContent/Hair/HairColourPicker" to="." method="_on_hair_colour_picker_color_changed"]
+[connection signal="text_changed" from="VBoxContainer/NameSelect" to="." method="_on_name_select_text_changed"]
+[connection signal="pressed" from="VBoxContainer/Save&ContinueButton" to="." method="_on_save_continue_button_pressed"]
+[connection signal="pressed" from="ConfirmBox/Panel/VBoxContainer/HBoxContainer/YesConfirm" to="." method="_on_yes_confirm_pressed"]
+[connection signal="pressed" from="ConfirmBox/Panel/VBoxContainer/HBoxContainer/NoConfirm" to="." method="_on_no_confirm_pressed"]

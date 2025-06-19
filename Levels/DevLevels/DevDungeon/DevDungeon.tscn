@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://crpi4pkgfwv7t"]
+
+[ext_resource type="PackedScene" uid="uid://by3itib6rosbr" path="res://Assets/Levels/DevLevels/DevDungeon/DevDungeon.glb" id="1_i4ogd"]
+[ext_resource type="PackedScene" uid="uid://j7wnsp1qkywp" path="res://Assets/Character/Player/Scene and Code/Player.tscn" id="2_xv3rx"]
+[ext_resource type="PackedScene" uid="uid://dnxw8hoetp8jp" path="res://Assets/Enemies/Character/Scene and Code/Enemy.tscn" id="3_xv3rx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xv3rx"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_26fu0"]
+sky_material = SubResource("ProceduralSkyMaterial_xv3rx")
+
+[sub_resource type="Environment" id="Environment_4kpc8"]
+background_mode = 2
+sky = SubResource("Sky_26fu0")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="DevDungeon" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4kpc8")
+
+[node name="DevDungeon" parent="." instance=ExtResource("1_i4ogd")]
+
+[node name="Player" parent="." instance=ExtResource("2_xv3rx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031, 3.41081, 12.082)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.644, 0.110735)
+light_color = Color(1, 0.835294, 0.501961, 1)
+light_specular = 0.0
+light_bake_mode = 1
+omni_range = 118.879
+omni_attenuation = 0.429
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2659, 5.644, -2.11288)
+light_color = Color(1, 0.835294, 0.501961, 1)
+light_specular = 0.0
+light_bake_mode = 1
+omni_range = 118.879
+omni_attenuation = 0.429
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2659, 5.644, 8.44606)
+light_color = Color(1, 0.835294, 0.501961, 1)
+light_specular = 0.0
+light_bake_mode = 1
+omni_range = 118.879
+omni_attenuation = 0.429
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.176, 7.80794)
+light_color = Color(1, 0.835294, 0.501961, 1)
+light_specular = 0.0
+light_bake_mode = 1
+omni_range = 11.041
+omni_attenuation = 0.429
+
+[node name="Enemy" parent="." instance=ExtResource("3_xv3rx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.385, 0, -2.09812)
+
+[editable path="DevDungeon"]

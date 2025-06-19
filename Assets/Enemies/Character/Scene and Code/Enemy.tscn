@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnxw8hoetp8jp"]
+
+[ext_resource type="PackedScene" uid="uid://s8h4ii7hirjx" path="res://Assets/Character/Player/Scene and Code/rig.tscn" id="1_4trbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4trbx"]
+radius = 0.28647
+height = 1.75
+
+[node name="Enemy" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.883386, 0)
+shape = SubResource("CapsuleShape3D_4trbx")
+
+[node name="Rig" parent="." instance=ExtResource("1_4trbx")]
+
+[node name="Skeleton3D" parent="Rig/PlayerModel/PlayerModel" index="0"]
+bones/1/position = Vector3(-0.000902426, 0.0040515, 0.552512)
+bones/1/rotation = Quaternion(-0.0302932, 0.706326, 0.706458, -0.0332223)
+bones/2/rotation = Quaternion(0.699806, 0.0846402, 0.706021, 0.0681368)
+bones/3/rotation = Quaternion(-1.33944e-08, 2.01096e-09, 0.233565, 0.972341)
+bones/4/rotation = Quaternion(-0.46002, -0.544417, 0.569549, -0.409396)
+bones/6/rotation = Quaternion(0.762914, -0.0867392, -0.638987, 0.0462042)
+bones/7/rotation = Quaternion(-1.65748e-08, -4.62157e-08, -0.235196, 0.971948)
+bones/8/rotation = Quaternion(0.463949, -0.537973, 0.578845, 0.400343)
+bones/10/rotation = Quaternion(-0.0470095, -0.048058, -0.0040308, 0.99773)
+bones/13/rotation = Quaternion(0.0620854, 0.00670853, 0.00041722, 0.998048)
+bones/15/rotation = Quaternion(-0.501246, 0.491892, 0.507979, 0.498751)
+bones/16/rotation = Quaternion(-0.617381, -0.123723, -0.102372, 0.7701)
+bones/17/rotation = Quaternion(4.3252e-08, -1.15238e-08, 0.265536, 0.964101)
+bones/18/rotation = Quaternion(0.00366707, 0.0344311, -0.029429, 0.998967)
+bones/31/rotation = Quaternion(-0.501246, -0.491892, -0.507979, 0.498751)
+bones/32/rotation = Quaternion(-0.628268, 0.141453, 0.0939236, 0.759243)
+bones/33/rotation = Quaternion(3.02744e-08, -6.21565e-10, -0.307684, 0.951489)
+bones/34/rotation = Quaternion(-0.0234102, -0.0501708, 0.131207, 0.989808)
+
+[node name="Body_FaceSprites" parent="Rig/PlayerModel/PlayerModel/Skeleton3D" index="2"]
+surface_material_override/0 = null
+surface_material_override/1 = null
+
+[node name="EldwykPrisonRag" parent="Rig/PlayerModel/PlayerModel/Skeleton3D" index="3"]
+visible = false
+
+[node name="Hair1" parent="Rig/PlayerModel/PlayerModel/Skeleton3D" index="4"]
+visible = true
+
+[node name="Hair2" parent="Rig/PlayerModel/PlayerModel/Skeleton3D" index="5"]
+visible = false
+
+[node name="Vargr_Wild" parent="Rig/PlayerModel/PlayerModel/Skeleton3D" index="9"]
+visible = true
+
+[editable path="Rig"]
+[editable path="Rig/PlayerModel"]
